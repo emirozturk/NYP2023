@@ -8,11 +8,14 @@ public class Main {
         System.out.println("Ağırlık giriniz (kg)");
         var kilo = scanner.nextFloat();
         var bmi = kilo / Math.pow(boy,2);
-        if(bmi < 18.5)
+        if(bmi < 18.5){
             System.out.println("Düşük");
-        if(bmi>18.5 && bmi<24.9)
+        }
+        else if(bmi<24.9){
             System.out.println("Normal");
-        if(bmi > 24.9)
+        }
+        else{
             System.out.println("Çok");
+        }
     }
 }
