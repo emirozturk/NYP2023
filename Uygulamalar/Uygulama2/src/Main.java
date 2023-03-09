@@ -9,16 +9,26 @@ public class Main {
     }
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
-        for(int i=0;i<3;i++){
-            System.out.println((i+1)+". kişi:");
+        int sayac=0;
+        while(sayac<3){
+            System.out.println((sayac+1)+". kişi:");
             System.out.println("Boy giriniz (m):");
             var stringBoy = scanner.nextLine();
             stringBoy = stringBoy.replace(",",".");
             var boy = Float.parseFloat(stringBoy);
+            if(boy<0){
+                System.out.println("Yanlış boy değeri");
+                continue;
+            }
             System.out.println("Ağırlık giriniz (kg)");
             var kilo = Float.parseFloat(scanner.nextLine().replace(",","."));
+            if(kilo<0){
+                System.out.println("Yanlış kilo değeri");
+                continue;
+            }
             var sonuc = bmiHesapla(boy,kilo);
             System.out.println(sonuc);
+            sayac++;
         }
     }
 }
