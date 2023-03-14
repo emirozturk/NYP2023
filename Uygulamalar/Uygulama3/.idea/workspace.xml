@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b275bfe7-73c4-4d1c-9263-2394488b40f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uygulama3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kisi.java" afterDir="false" />
-    </list>
+    <list default="true" id="b275bfe7-73c4-4d1c-9263-2394488b40f4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678788387826</updated>
-      <workItem from="1678788389136" duration="988000" />
+      <workItem from="1678788389136" duration="1078000" />
     </task>
     <servers />
   </component>
