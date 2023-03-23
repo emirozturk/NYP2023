@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
+
+/*
 class Kuyruk {
-    Object a;
     private int[] elemanlar;
     private int sayac;
     public Kuyruk(int kuyrukBuyuklugu){
@@ -37,6 +39,39 @@ class Kuyruk {
         sonuc+="Kuyruk: ";
         for(int i=0;i<sayac;i++)
             sonuc += elemanlar[i]+" ";
+        return sonuc;
+    }
+}
+*/
+class Kuyruk {
+    private List<Integer> elemanlar;
+    public Kuyruk(int elemanSayisi){
+        elemanlar = new ArrayList<>(elemanSayisi);
+    }
+    public boolean ekle(int eleman){
+        elemanlar.add(eleman);
+        return true;
+    }
+    public int cikar(){
+        var cikarilan = elemanlar.get(0);
+        elemanlar.remove(0);
+        return cikarilan;
+    }
+    //⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
+    //⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠BUNU HENÜZ BİLMEMİZE GEREK YOK⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
+    //⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
+    public String toString(){
+        var sonuc= new StringBuilder();
+        sonuc.append("Kuyruk: ");
+        for (Integer integer : elemanlar) sonuc.append(integer).append(" ");
+        return sonuc.toString();
+    }
+
+    public String yazdir(){
+        String sonuc="";
+        sonuc+="Kuyruk: ";
+        for(var eleman:elemanlar)
+            sonuc += eleman + " ";
         return sonuc;
     }
 }
