@@ -1,16 +1,11 @@
 public class Main {
-    static byte birByte;
-    static int tamsayi;
-    static long buyukTamsayi;
-    static float ondalikliSayi;
-    static boolean evetYaDaHayir;
-    static String metin;
-
+    public static int fonksiyon(int deger){
+        deger = 100;
+        return deger;
+    }
     public static void main(String[] args) {
-        System.out.println(tamsayi);
-        System.out.println(buyukTamsayi);
-        System.out.println(ondalikliSayi);
-        System.out.println(evetYaDaHayir);
-        System.out.println(metin);
+        int deger = 10;
+        deger = fonksiyon(deger);
+        System.out.println(deger);
     }
 }
