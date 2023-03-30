@@ -1,25 +1,40 @@
+import java.time.MonthDay;
+
 public class Yazdirma {
-    private void baslikYazdir(String karakter){
-        System.out.println(karakter+"**********");
-        System.out.print("*");
+    private String baslikOlustur(String karakter){
+        return karakter+"**********\n*";
     }
-    private void altMetinYazdir(){
-        System.out.println("*");
-        System.out.println("***********");
+    private String altMetinOlustur(){
+         return "*\n***********";
+    }
+    private String hazirla(int sayi){
+        String cikti = "";
+        cikti += baslikOlustur("i");
+        cikti += String.format("%9d",sayi);
+        cikti += altMetinOlustur();
+        return cikti;
+    }
+    private String hazirla(float ondalikliSayi){
+        String cikti = "";
+        cikti += baslikOlustur("f");
+        cikti += String.format("%9.2f",ondalikliSayi);
+        cikti += altMetinOlustur();
+        return cikti;
+    }
+    private String hazirla(String metin){
+        String cikti = "";
+        cikti += baslikOlustur("s");
+        cikti += String.format("%9s",metin);
+        cikti += altMetinOlustur();
+        return cikti;
     }
     public void yazdir(int sayi){
-        baslikYazdir("i");
-        System.out.printf("%9d",sayi);
-        altMetinYazdir();
+        System.out.println(hazirla(sayi));
     }
     public void yazdir(float ondalikliSayi){
-        baslikYazdir("f");
-        System.out.printf("%9.2f",ondalikliSayi);
-        altMetinYazdir();
+        System.out.println(hazirla(ondalikliSayi));
     }
     public void yazdir(String metin){
-        baslikYazdir("s");
-        System.out.printf("%9s",metin);
-        altMetinYazdir();
+        System.out.println(hazirla(metin));
     }
 }
