@@ -1,6 +1,17 @@
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.MonthDay;
 
 public class Yazdirma {
+    String tur = "";
+    Path yol;
+    public Yazdirma(Path yol){
+        tur = "Dosya";
+        this.yol = yol;
+    }
+    public Yazdirma(){
+        tur = "Ekran";
+    }
     private String baslikOlustur(String karakter){
         return karakter+"**********\n*";
     }
@@ -29,12 +40,33 @@ public class Yazdirma {
         return cikti;
     }
     public void yazdir(int sayi){
-        System.out.println(hazirla(sayi));
+        if(tur.equals("Ekran")){
+            System.out.println(hazirla(sayi));
+        }
+        else if(tur.equals("Dosya")){
+            try{
+                Files.writeString(yol,hazirla(sayi));
+            }catch (Exception ex){}
+        }
     }
     public void yazdir(float ondalikliSayi){
-        System.out.println(hazirla(ondalikliSayi));
+        if(tur.equals("Ekran")){
+            System.out.println(hazirla(ondalikliSayi));
+        }
+        else if(tur.equals("Dosya")){
+            try {
+                Files.writeString(yol,hazirla(ondalikliSayi));
+            }catch (Exception ex){}
+        }
     }
     public void yazdir(String metin){
-        System.out.println(hazirla(metin));
+        if(tur.equals("Ekran")){
+            System.out.println(hazirla(metin));
+        }
+        else if(tur.equals("Dosya")){
+            try {
+                Files.writeString(yol,hazirla(metin));
+            }catch (Exception ex){}
+        }
     }
 }
